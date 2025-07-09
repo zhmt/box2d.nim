@@ -460,6 +460,7 @@ type
     angularDamping*: cfloat
     gravityScale*: cfloat
     sleepThreshold*: cfloat
+    name*: cstring
     userData*: pointer
     enableSleep*: bool
     isAwake*: bool

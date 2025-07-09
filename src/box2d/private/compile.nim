@@ -7,6 +7,10 @@ const box2dRoot = currentSourcePath.parentDir / "box2d"
 
 {.passC: "-I " & (box2dRoot / "include")}
 {.passC: "-I " & (box2dRoot / "src")}
+when defined(vcc):
+  {.passC: "/std:c17".}
+else:
+  {.passC: "-std=c17".}
 
 {.passC: "-I " & (box2dRoot / "extern" / "glad" / "include")}
 {.passC: "-I " & (box2dRoot / "extern" / "simde")}
